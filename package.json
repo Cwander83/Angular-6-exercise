@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@angular/cli": "^6.2.3",
+    "rxjs-compat": "^6.3.3"
+  }
+}
