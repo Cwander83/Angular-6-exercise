@@ -7,8 +7,10 @@ then work on dashboard only goes to signup if not signed in-->
     [mode]="(isHandset$ | async)!.matches ? 'over' : 'side'" [opened]="(isHandset$ | async)!.matches">
     <mat-toolbar color="primary">site guide</mat-toolbar>
     <mat-nav-list>
+      <a mat-list-item routerLink="/">Home</a>
       <a mat-menu-item [matMenuTriggerFor]="dashboard">Dashboard</a>
       <a mat-list-item routerLink="/login">Login</a>
+
       <a mat-list-item routerLink="/signup">signup</a>
     </mat-nav-list>
   </mat-sidenav>
@@ -24,10 +26,10 @@ then work on dashboard only goes to signup if not signed in-->
         <mat-icon class="menu-icon header-large-menu" [matMenuTriggerFor]="menu">menu</mat-icon>
       </mat-toolbar-row>
       <mat-menu #menu="matMenu">
-        <button mat-menu-item routerLink="">home</button>
+        <button mat-menu-item routerLink="/">home</button>
         <button mat-menu-item [matMenuTriggerFor]="dashboard">Dashboard</button>
-        <mat-menu #dashboard="matMenu"> 
-          <button mat-menu-item routerLink="">Dashboard Home</button>
+        <mat-menu #dashboard="matMenu">
+          <button mat-menu-item routerLink="dashboard">Dashboard Home</button>
           <button mat-menu-item routerLink="">Profile</button>
           <button mat-menu-item routerLink="">input</button>
           <button mat-menu-item routerLink="">calender</button>

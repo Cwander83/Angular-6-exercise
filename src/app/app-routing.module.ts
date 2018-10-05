@@ -8,17 +8,29 @@ import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { WorkoutplanComponent } from './pages/workoutplan/workoutplan.component';
 
 const appRoutes: Routes = [
-  {
-    path: 'login',
-    component: LoginComponent,
-    data: { title: 'Login' }
-  },
   {
     path: 'home',
     component: HomeComponent,
     data: { title: 'Home' }
+  },
+  {
+    path: 'workoutplan',
+    component: WorkoutplanComponent,
+    data: { title: 'Workout Plan' }
+  },
+  // contact page
+  {
+    path: 'contact',
+    component: HomeComponent,
+    data: { title: 'Contact' }
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+    data: { title: 'Log in' }
   },
   {
     path: 'dashboard',
@@ -28,7 +40,7 @@ const appRoutes: Routes = [
   {
     path: 'dashboard/profile:id',
     component: ProfileComponent,
-    data: { title: 'Profile'}
+    data: { title: 'Profile' }
   },
   {
     path: 'signup',
