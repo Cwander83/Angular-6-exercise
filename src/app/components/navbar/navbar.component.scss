@@ -1,0 +1,50 @@
+$black: black;
+$white: white;
+
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+  box-shadow: 3px 0 6px rgba(0, 0, 0, .24);
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+}
+
+
+
+.header {
+  color: darken($white, 9%);
+}
+
+
+.header-spacer {
+  flex: 1 1 auto;
+}
+
+.mat-toolbar {
+  background-color: $black;
+}
+
+.menu-icon {
+  color: white;
+  padding: 0 14px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .sidenav {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-large-menu {
+    display: none;
+  }
+}

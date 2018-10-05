@@ -1,7 +1,9 @@
 <mat-toolbar class="header">
   <mat-toolbar-row>
-    
-    <span class="example-spacer"></span>
+    <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset$ | async">
+      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+    <span class="example-spacer">4 week revolution</span>
     <mat-icon class="menu-icon" [matMenuTriggerFor]="menu">menu</mat-icon>
   </mat-toolbar-row>
   <mat-menu #menu="matMenu">

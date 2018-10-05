@@ -26,7 +26,7 @@ const appRoutes: Routes = [
     data: { title: 'Dashboard' }
   },
   {
-    path: 'profile',
+    path: 'dashboard/profile:id',
     component: ProfileComponent,
     data: { title: 'Profile'}
   },
