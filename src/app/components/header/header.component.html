@@ -1,0 +1,16 @@
+<mat-toolbar class="header">
+  <mat-toolbar-row>
+    
+    <span class="example-spacer"></span>
+    <mat-icon class="menu-icon" [matMenuTriggerFor]="menu">menu</mat-icon>
+  </mat-toolbar-row>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="dashboard">Dashboard</button>
+    <mat-menu #dashboard="matMenu">
+      <button mat-menu-item>4 Week Rovolution</button>
+      <button mat-menu-item>Contact Page</button>
+    </mat-menu>
+    <button mat-menu-item>4 Week Rovolution</button>
+    <button mat-menu-item>Contact Page</button>
+  </mat-menu>
+</mat-toolbar>
