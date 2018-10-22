@@ -24,13 +24,15 @@ var config = require('./config/database');
 app.use(morgan('combined'))
 
 mongoose.Promise = require('bluebird');
+
 mongoose.connect(config.database, {
+    useNewUrlParser: true,
     promiseLibrary: require('bluebird')
   })
   .then(() => console.log('connection succesful'))
   .catch((err) => console.error(err));
 
-  app.use(passport.initialize());
+app.use(passport.initialize());
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -49,5 +51,6 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
 
 module.exports = app;

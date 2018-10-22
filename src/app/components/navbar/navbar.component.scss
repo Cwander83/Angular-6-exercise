@@ -16,12 +16,9 @@ $white: white;
   top: 0;
 }
 
-
-
 .header {
   color: darken($white, 9%);
 }
-
 
 .header-spacer {
   flex: 1 1 auto;
@@ -47,4 +44,7 @@ $white: white;
   .header-large-menu {
     display: none;
   }
+}
+@media (max-width: 400px)and (orientation : landscape){
+  
 }

@@ -7,7 +7,11 @@ var jwt = require('jsonwebtoken');
 var router = express.Router();
 var User = require("../models/user");
 
-
+router.get('/get', function (req, res) {
+  User.find({})
+    .then(data => res.json(data))
+    .catch(err => res.status(422).json(err))
+})
 
 router.post('/signup', function (req, res) {
   if (!req.body.username || !req.body.password) {
@@ -71,7 +75,7 @@ router.post('/signin', function (req, res) {
 
 getToken = function (headers) {
   if (headers && headers.authorization) {
-    var parted = headers.authorization.split(' ');
+    const parted = headers.authorization.split(' ');
     if (parted.length === 2) {
       return parted[1];
     } else {

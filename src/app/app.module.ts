@@ -11,10 +11,11 @@ import { MaterialModule } from './material';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { WorkoutplanComponent } from './pages/workoutplan/workoutplan.component';
-import { ProfileComponent } from './pages/profile/profile.component';
+import { ProfileComponent } from './pages/dashboard/profile/profile.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { LoginComponent } from './pages/login/login.component';
-import { SignupComponent } from './pages/signup/signup.component';
+import { LoginComponent } from './pages/dashboard/login/login.component';
+import { SignupComponent } from './pages/dashboard/signup/signup.component';
+import { DayComponent } from './pages/workoutplan/day/day.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -29,9 +30,10 @@ import {
   MatListModule,
   MatGridListModule,
   MatCardModule,
-  MatMenuModule
+  MatMenuModule,
 } from '@angular/material';
-import { HomepageComponent } from './components/homepage/homepage.component';
+
+
 
 @NgModule({
   declarations: [
@@ -45,7 +47,7 @@ import { HomepageComponent } from './components/homepage/homepage.component';
     HeaderComponent,
     FooterComponent,
     NavbarComponent,
-    HomepageComponent
+    DayComponent,
   ],
   imports: [
     HttpClientModule,
@@ -62,9 +64,9 @@ import { HomepageComponent } from './components/homepage/homepage.component';
     MatListModule,
     MatGridListModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

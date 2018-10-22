@@ -34,12 +34,12 @@ import {
   MatToolbarModule,
   MatTooltipModule,
   MatTreeModule,
-  MatFormFieldModule
+  MatFormFieldModule,
 } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule } from '@angular/cdk/tree';
-import { HttpClientModule } from '@angular/common/http';
+
 
 import { NgModule } from '@angular/core';
 
@@ -81,7 +81,7 @@ import { NgModule } from '@angular/core';
     MatTreeModule,
     MatFormFieldModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   exports: [
     CdkTableModule,
@@ -123,7 +123,7 @@ import { NgModule } from '@angular/core';
     MatTreeModule,
     MatFormFieldModule,
     FormsModule,
-    ReactiveFormsModule
-  ]
+    ReactiveFormsModule,
+  ],
 })
 export class MaterialModule {}

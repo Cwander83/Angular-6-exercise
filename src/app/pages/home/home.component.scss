@@ -1,27 +1,58 @@
-$center: center;
-
-
 .homePage {
   background-image: url("../../assets/images/gym-background.jpg");
-  background-position: $center;
+  background-position: center;
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
   height: 100%;
-  flex: 1 1 auto;
-  text-align: $center;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
   font-family: 'Nunito Sans',
     sans-serif;
-
 }
 
 .opening-message {
   font-size: 26px;
-  color: white;
-  text-align: $center;
-  // background-color: rgba(0,0,0,.2);
+  color: ghostwhite;
+  text-align: center;
+  flex: auto;
+  background-color: rgba(0, 0, 0, .4);
 }
-.message{
+
+.message {
   padding: 0;
-  margin: 0;
+  margin: auto;
+  max-width: 890px;
+  flex: auto;
+  // text-shadow: 3px 3px black;
+   text-shadow: -1px 0 black,
+   0 1px black,
+   1px 0 black,
+   0 -1px black;
+}
+
+img {
+  margin: auto;
+  background-color: rgba(0, 0, 0, .3);
+  border-radius: 40px;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li a {
+  color: ghostwhite;
+}
+
+li a:hover {
+  color: gray;
+}
+
+li a:active {
+  color: red;
 }
